@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BCRYPT</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">User</a>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="/users/login">Login</a></li>
+          <li><a href="/users/register">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="/users/login" method="post">
+        <div class="container">
+          <h1>Login</h1>
+          <% if(error) { %>
+          <p><%= error %></p>
+          <% } %>
+          <hr />
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+          />
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            id="password"
+          />
+          <button type="submit" class="registerbtn">Login</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
